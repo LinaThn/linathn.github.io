@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Please play the game</h1>
+        </div>
+        <div class="col-12">
+            {{#if post}}
+                User 1 chose {{userChoice1}} and User 2 chose {{userChoice2}}.
+                {{winningUser}} is the winner.
+            {{/if}}
+            {{#unless post}}
+            <form action="/game" method="post">
+                 <div class="form-group">
+                     <label for="userChoice1">Choice for user 1</label>
+                          <select class="form-control" id="exampleFormControlSelect1" name=userChoice1>
+                                  <option>Scissors</option>
+                                  <option>Paper</option>
+                                  <option>Rock</option>
+      
+                            </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="userChoice2">Choice for user 2</label>
+                          <select class="form-control" id="exampleFormControlSelect1" name=userChoice2>
+                                  <option>Scissors</option>
+                                  <option>Paper</option>
+                                  <option>Rock</option>
+      
+                            </select>
+                    </div>
+                </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            {{/unless}}
+        </div>
+    </div>
+</div>
+              
